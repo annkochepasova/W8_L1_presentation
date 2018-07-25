@@ -9,3 +9,6 @@ df = pd.read_csv(file, encoding="ISO-8859-1")
 del df['FIELD8']
 # Drop all rows with missing information
 df = df.dropna(how='any')
+
+# Export file as a CSV, without the Pandas index, but with the header
+df.to_csv("Output/fileOne.csv", index=False, header=True)
